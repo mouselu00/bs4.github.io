@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>BootStrap 4 教學</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section data-markdown>
+					# Bootstrap 4 
+					## 基礎教學
+				</section>
+				<section>
+					<p data-markdown>## 什麼是Bootstrap？</p>
+
+					<p class="fragment" data-markdown>
+						-	一個前端元件庫（library）。
+						-	用於開發 HTML、CSS 和 JS 的開源工具包。
+						-	以移動裝置為優先設計。
+					</p>
+				</section>
+				<section>
+						<p data-markdown>## 為何存在?</p>
+						<p class="fragment" data-markdown>
+							1.	為了加快前端設計的開發
+							2.	支援所有遊覽器CSS的文法
+							3.	有效的提升開發響應時網頁的效率
+						</p>
+					</section>
+					<section>
+						<p data-markdown>## 優缺點?</p>
+						<small class="fragment" data-markdown>
+							優點| 缺點
+							-|-
+							開發速度|代碼衝突
+							簡單易學|代码的规则
+							视觉效果一致性|视觉效果一致性
+							對不擅長設計網頁者友好|兼容太早期的版本IE9<需要額外處理
+							栅格系统|
+							完善的文檔|
+						</small>
+					</section>
+					<section>
+						<p data-markdown>## 其他類似?</p>
+						<p class="fragment" data-markdown>
+							-   [Foundation Framework](https://foundation.zurb.com/)
+							-   [Pure CSS](https://purecss.io/)
+							-   [Gumby Framework](https://gumbyframework.com/)
+							-   [Materialize CSS](https://materializecss.com/)
+						</p>
+					</section>
+			</section>
+
+			<section>
+				<section>
+					<p data-markdown>## 響應式網頁設計</p>
+					<p class="fragment">
+						<span class="fragment highlight-red">R</span>esponsive 
+						<span class="fragment highlight-red">W</span>eb 
+						<span class="fragment highlight-red">D</span>esign
+					</p>
+					<p class="fragment">無論使用者透過何種裝置瀏覽網頁，該網頁的顯示效果會依據螢幕尺寸 進行調整。</p>
+				</section>
+				<section>
+					<p data-markdown>## 為何存在?</p>
+					<p class="fragment" data-markdown>
+						為了滿足用戶在不同大小的熒幕上體驗而規劃出這一套設計概念。
+					</p>
+				</section>
+				
+			</section>
+
+			<section>
+				<section data-markdown>
+					## 版本支援
+				</section>
+				<section>
+					<p data-markdown>## 遊覽器?</p>
+					<p class="fragment" data-markdown>
+						主要大型的遊覽器都支援,但是IE只支援到10+的版本
+					</p>
+				</section>
+				<section data-markdown>
+					##	Desktop support
+					- | chrome | firefox | IE | Edge | opera | safari
+					-|-|-|-|-|-|-|
+					WIN|S|S|S>10+|S|S|N
+					MAC|S|S|N|N|S|S
+				</section>
+				<section data-markdown>
+					##	Mobile support
+					- | chrome | firefox | safari | Android Browser & WebView | Edge 
+					-|-|-|-|-|-|
+					AND|S|S|N|Android 5.0+|S
+					IOS|S|S|S|N|S
+					WIN|N|N|N|N|S
+				</section>
+				<section>
+					<p data-markdown>## BS4 與前版本的差異?</p>
+					<p class="fragment" data-markdown>
+							BS3與BS4的*語法*和*樣式*會有一些差異和捨棄。	
+							建議去翻閱[**更新紀錄**](http://bootstrap.hexschool.com/docs/4.0/migration/)
+					</p>
+				</section>
+				<section>
+					<p data-markdown>## 解決兼容性的問題?</p>
+					<p class="fragment" data-markdown>
+						-   正確呼叫遠端地址
+						-   針對瀏覽器的內容做標識（使用meta標籤調節瀏覽器的渲染方式)
+						-	[其他解決方案](https://tw.saowen.com/a/9ca6b87d075897ea07b87ef045578fa466b450c58f7eceddc44b387df0bbc079)
+					</p>
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					##	準備事項
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						##  編輯器
+						-   [codepen](https://codepen.io/)
+						-   [視覺化開發工具](https://v40.pingendo.com/new)					
+					</textarea>
+				</section>
+				<section>
+					<div data-markdown>
+						##  下載安裝
+						-   [官網](https://getbootstrap.com/docs/4.0/getting-started/download/)
+						-   [CDN內容傳遞網路](https://www.bootstrapcdn.com/)						
+					</div>
+					<aside class="notes">
+					-	jquery slim版本是3.0之後推出的瘦身版本,當中不包含jquery的AJAX、效果等功能。<br>
+					-	cdn導入的資源integrity屬性是防止使用期間被串改後導致網崩潰<br>
+					-	在導入資源的順序很重要
+						</aside>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	基本開始框架
+						```
+						<DOCTYPE html>
+						<html lang="en">
+							<head>
+							<meta charset="utf-8"> 
+							// width=device-width 遊覽器畫面的寬度根據設定的熒幕大小
+							// initial-scale=1 表示初始化載入畫面時拉進的等級（zoom level）
+							<meta name="viewport" content="width=device-width, initial-scale=1">
+							//CSS 支援套入這裡
+							</head>
+							<body>
+								<div class="container">		//容器
+									//...內容
+								</div>
+								//javascript 支援套入這裡
+							</body>
+						</html>
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					##  BS預設做了什麼
+					-   字體預設大小
+					-   字體樣式
+					-   列表樣式
+					-   表格
+					-   標籤的空間模式（box-sizing）
+					-   etc
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					##	核心編碼方式
+				</section>
+				<section>
+					<div  data-markdown>
+						<script type="text/template">
+							##	樣式類
+							所有的樣式BS4已經寫好讓開發者使用，官方的文檔上都能查詢的到。
+
+							```
+							//  單一樣式類
+							<div class="bg-primary"></div>
+
+							//  複合樣式類
+							<div class="bg-primary text-center text-warning"></div>
+							```
+							
+						</script>
+					</div>
+					<aside class="notes">
+						雖然可以使用< div >標籤編輯網頁的排版打天下，但是缺點是會影響SEO的協定
+					</aside>
+				</section>
+				<section>
+					<div  data-markdown>
+						##  樣式使用的順序
+
+						<small>
+						組合|個體
+						-|-
+						導航樣式類`.nav`|按鈕樣式類`.btn`
+						表格樣式類`.table`|文本顏色樣式類`.text-primary`
+						下拉選單樣式類`.dropdown-menu`|背景樣式類`.bg-light`
+						</small>
+					</div>
+					<aside class="notes">
+						- 一些樣式需要按照原本的順序才可以正常的現實，不然會發生跑版或是無法顯示該有的效果<br>
+						- 一些樣式類可以不按順序的使用
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p data-markdown>##	栅格系统</p>
+					<p class="fragment" data-markdown>
+						-	便於設計網頁的排版
+						-	響應時設計的主要核型之一
+					</p>
+				</section>
+				<section>
+					<img src="./images/grid.JPG" />
+				</section>
+				<section>
+					<div data-markdown>##	栅格類</div>
+					<img src="./images/gridSupportSize.JPG" />
+				</section>
+				<section>
+					<p data-height="612" data-theme-id="dark" data-slug-hash="GBWRzJ" data-default-tab="html,result" data-user="haruhhiro" data-embed-version="2" data-pen-title="BS4" class="codepen">See the Pen <a href="https://codepen.io/haruhhiro/pen/GBWRzJ/">BS4</a> by Hadwey (<a href="https://codepen.io/haruhhiro">@haruhhiro</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+				<section data-markdown>
+						##  補充
+						1.  如果不希望欄位之間有空間，可在`.row`上添加`.no-gutters`，會出去掉`margin`和`padding`
+						2.  在沒有設置寬度的網格欄位將自動以相同寬度佈局。例如，四個 `.col-sm` 將自動設為小中斷點的 25% 寬度,是`flexbox`的功勞。
+						3.  [更多用法](http://bootstrap.hexschool.com/docs/4.1/layout/grid/)
+				</section>
+			</section>
+			
+			<section>
+				<section>
+					<p data-markdown>##	內容</p>
+				</section>
+				<section>
+					<p data-markdown>##	文字排版</p>
+					<img src="./images/h1h6Tag.JPG" />
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<h1>h1. Bootstrap heading</h1>
+							<p class="h2">h1. Bootstrap heading</p>
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<img src="./images/displayHeadline.JPG" />
+					<section data-markdown>
+						<script type="text/template">
+							```
+							<p class="display-1">Display 1</p>
+							<p class="display-2">Display 2</p>
+
+							```
+						</script>
+					</section>
+				</section>
+			</section>
+			<section>
+				<section data-markdown>
+					##	顏色
+				</section>
+				<section data-markdown>
+					
+					<script type="text/template">
+						##	通用顏色
+						-	muted、primary、success、info、warning
+						-	danger、secondary、white、dark、light、body
+
+						顏色名稱前面機上bg就是設定背景的顏色，加上text就是字體顏色
+						```
+						<div class="bg-dark">
+							<p class="text-white">文字白色</p>
+						</div>
+						```
+					</script>
+					
+				</section>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			markdown: {
+				smartypants: true
+			},
+			width: "100%",
+			height: "100%",
+			margin: 0.1,
+			minScale: 0.9,
+			maxScale:0.9,
+					dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
