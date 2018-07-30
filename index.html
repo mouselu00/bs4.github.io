@@ -262,7 +262,7 @@
 			
 			<section>
 				<section>
-					<p data-markdown>##	內容</p>
+					<p data-markdown>##	通用类别</p>
 				</section>
 				<section>
 					<p data-markdown>##	文字排版</p>
@@ -288,13 +288,7 @@
 						</script>
 					</section>
 				</section>
-			</section>
-			<section>
 				<section data-markdown>
-					##	顏色
-				</section>
-				<section data-markdown>
-					
 					<script type="text/template">
 						##	通用顏色
 						-	muted、primary、success、info、warning
@@ -307,7 +301,151 @@
 						</div>
 						```
 					</script>
-					
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	邊框 border
+						- class : border-{position} | border-{color} | border-{position}-{disap}
+						- position : top | right | bottom | left
+						- disabled : 0 | 1
+						
+						```
+						<div class="border border-top border-primary">...</div>
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	圆角 radius
+						- class : rounded-{value} 
+						- position : top | right | bottom | left | 0
+						
+						```
+						<div class="rounded-top">...</div>
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	Display 显示
+						- class : d-{value} | d-{breakPoint}-{value} | d-print-{value}
+						- value : none | inline | inline-block | block | table | table-cell | table-row | flex | inline-flex
+						- breakPoint : sm | md | lg | xl
+						```
+						<div class="d-none d-sm-block">...</div> // 只有在最小的断点才会显示内容
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	Position 位置
+						- class : position-{mode} | fixed-{top | bottom}
+						- mode : static | relative | absolute | fixed | sticky
+						```
+						<div class="position-absolute">...</div> // 脱离框架自由设定位置
+						<div class="fixed-top">...</div> // 贴在顶部不管页面滚动
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	Sizing 尺寸
+						- class : w-{percent} | h-{percent} | mw-{percent} | mh-{percent}
+						- percent : 25 | 50 | 75 | 100
+						```
+						<div class="w-100 h-50 mw-100">...</div> // 宽 100% 高 50% 最大宽 100%
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	Spacing 空间
+						- class : m{position}-{number} | p{position}-{number} | mx-auto
+						- position : t | r | b | l  | x(left+right) | y(top+bottom)
+						- number : 1(*0.25) | 2(*0.5) | 3 | 4(*1.5) | 5(*3) | auto
+						```
+						<div class="pt-1 m-1">...</div> // 内距顶部 1 外距全部 1
+						<div class="mx-auto">...</div> // 水平居中
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	Text align 对齐
+						- class : text-{breakPoint}-{align}
+						- breakPoint : sm | md | lg | xl
+						- align : center | left | right 
+						```
+						<div class="text-sm-center">...</div> // 内容居中当sm大小的时候
+						<div class="text-right">...</div> // 内容向右靠
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	Text align 对齐其他
+						- class : text-{case} | text-nowrap | text-truncate
+						- case : uppercase | lowercase | capitalize
+						```
+						<div class="text-uppercase text-nowrap">...</div> // 内容转为大写 不换行
+						<div class="text-truncate">...</div> // 内容过长转为 ...
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	font 文本
+						- class : font-{style}
+						- style : weight-bold | weight-normal | weight-light | italic
+						```
+						<div class="font-weight-bold">...</div> // 文本粗体
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	vertical text 垂直對齊
+						- class : align-{verticalPosition}
+						- verticalPosition : baseline | top | middle | bottom | text-top | text-bottom
+						```
+						// （only if inline/inline-block/inline-table/table） 
+						<div class="align-baseline">...</div> // 文本贴底
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	visibility 可見
+						- class : visible | invisible
+						```
+						<div class="invisible">...</div> // 不显示内容
+						// invisible 不显示但位置保存 ， display:none 是连位置也不显示
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	shadow 影子
+						- class : shadow-{type}
+						- type : none | sm | lg
+						```
+						<div class="shadow">...</div> // 正常显示影子
+						<div class="shadow-lg">...</div> // 显示扩大影子
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						##	float 浮动
+						- class :float-{direction} | float-{breakPoint}-{direction}
+						- direction : left | right | none
+						```
+						<div class="clearfix">	// clearfix 是保证外围不受浮动影响
+							<div class="float-left">...</div> // 向左边浮动
+							<div class="float0right">...</div> // 向右边浮动
+						</div>
+						```
+					</script>
 				</section>
 			</section>
 
